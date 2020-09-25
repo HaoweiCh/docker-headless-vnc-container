@@ -1,0 +1,13 @@
+version: "3"
+services: 
+    centos_xfce_vnc:
+        image: heawercher/browserx:centos-xfce-vnc
+        build:
+            context: .
+            dockerfile: Dockerfile.centos.xfce.vnc
+        ports: 
+            - "6901:6901"
+            - "9222:9222"
+        shm_size: 512m
+        environment: 
+            VNC_PW: "123321"
